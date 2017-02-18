@@ -1,6 +1,7 @@
 
 
 var express = require('express');
+
 var todoController = require('./controllers/todoController');
 
 var app = express();
@@ -18,7 +19,12 @@ todoController(app);
 
 
 //listen to ports
-app.listen(3000);
-console.log("Everything working fine");
+var port = processs.env.PORT || 8080
+
+app.listen(port ,function(){
+	console.log("App Running");
+});
+
+
 
 
